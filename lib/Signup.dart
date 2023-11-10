@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:my_app/dribble.dart';
 import 'package:my_app/login.dart';
 
 class Signup extends StatefulWidget {
@@ -14,8 +15,8 @@ class _SignupState extends State<Signup> {
     return Scaffold(
       backgroundColor: Colors.white,
       body: Column(children: [
-        SizedBox(height: 120),
-        Center(
+        const SizedBox(height: 120),
+        const Center(
           child: Text(
             'Create Account',
             style: TextStyle(
@@ -25,8 +26,8 @@ class _SignupState extends State<Signup> {
             ),
           ),
         ),
-        SizedBox(height: 10),
-        Center(
+        const SizedBox(height: 10),
+        const Center(
           child: Text(
             'Sign Up',
             style: TextStyle(
@@ -36,49 +37,49 @@ class _SignupState extends State<Signup> {
             ),
           ),
         ),
-        Padding(
+        const Padding(
           padding: EdgeInsets.symmetric(vertical: 10),
           child: Form(
             child: Column(),
           ),
         ),
-        SizedBox(height: 5),
+        const SizedBox(height: 5),
         TextFormField(
-          decoration: InputDecoration(
+          decoration: const InputDecoration(
             labelText: 'Email Address',
             prefixIcon: Icon(Icons.email),
             border: OutlineInputBorder(),
           ),
         ),
-        Padding(
+        const Padding(
           padding: EdgeInsets.symmetric(vertical: 10),
           child: Form(
             child: Column(),
           ),
         ),
-        SizedBox(height: 5),
+        const SizedBox(height: 5),
         TextFormField(
-          decoration: InputDecoration(
+          decoration: const InputDecoration(
             labelText: 'Password',
             prefixIcon: Icon(Icons.email),
             border: OutlineInputBorder(),
           ),
         ),
-        Padding(
+        const Padding(
           padding: EdgeInsets.symmetric(vertical: 10),
           child: Form(
             child: Column(),
           ),
         ),
-        SizedBox(height: 5),
+        const SizedBox(height: 5),
         TextFormField(
-          decoration: InputDecoration(
+          decoration: const InputDecoration(
             labelText: ' Confirm Password',
             prefixIcon: Icon(Icons.email),
             border: OutlineInputBorder(),
           ),
         ),
-        SizedBox(height: 20),
+        const SizedBox(height: 20),
         Container(
           width: 150,
           height: 25,
@@ -88,18 +89,21 @@ class _SignupState extends State<Signup> {
           ),
           child: TextButton(
             style: TextButton.styleFrom(foregroundColor: Colors.black),
-            onPressed: () {},
-            child: Text('Sign up'),
+            onPressed: () {
+              Navigator.push(context,
+                  MaterialPageRoute(builder: ((context) => Dribble())));
+            },
+            child: const Text('Sign up'),
           ),
         ),
-        SizedBox(height: 20),
+        const SizedBox(height: 20),
         TextButton(
           style: TextButton.styleFrom(foregroundColor: Colors.black),
           onPressed: () {
-            Navigator.push(
-                context, MaterialPageRoute(builder: ((context) => Login())));
+            Navigator.push(context,
+                MaterialPageRoute(builder: ((context) => const Login())));
           },
-          child: Text('Already have an account, Log in'),
+          child: const Text('Already have an account, Log in'),
         ),
       ]),
     );
