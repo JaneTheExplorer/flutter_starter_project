@@ -52,8 +52,6 @@ class MyListTile extends StatelessWidget {
                 ),
               ],
             ),
-            SizedBox(width: 80),
-            Icon(Icons.arrow_forward_ios),
           ],
         ),
       ],

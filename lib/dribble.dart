@@ -4,6 +4,7 @@ import 'package:my_app/pages/my_button.dart';
 import 'package:my_app/pages/my_list_tile.dart';
 import 'package:my_app/project.dart';
 import 'package:my_app/review.dart';
+import 'package:my_app/textrich.dart';
 import 'package:smooth_page_indicator/smooth_page_indicator.dart';
 
 class Dribble extends StatefulWidget {
@@ -22,10 +23,10 @@ class _DribbleState extends State<Dribble> {
       floatingActionButton: FloatingActionButton(
         onPressed: () {
           Navigator.push(
-              context, MaterialPageRoute(builder: ((context) => Project())));
+              context, MaterialPageRoute(builder: ((context) => Review())));
         },
         backgroundColor: Colors.pink,
-        child: Icon(
+        child: const Icon(
           Icons.monetization_on,
           size: 20,
         ),
@@ -39,7 +40,7 @@ class _DribbleState extends State<Dribble> {
             children: [
               IconButton(
                 onPressed: () {},
-                icon: Icon(
+                icon: const Icon(
                   Icons.home,
                   size: 18,
                   color: Colors.pink,
@@ -47,7 +48,7 @@ class _DribbleState extends State<Dribble> {
               ),
               IconButton(
                 onPressed: () {},
-                icon: Icon(
+                icon: const Icon(
                   Icons.settings,
                   size: 18,
                   color: Colors.black,
@@ -66,9 +67,9 @@ class _DribbleState extends State<Dribble> {
               child: Column(
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   children: [
-                    SizedBox(height: 50),
+                    const SizedBox(height: 50),
                     Row(children: [
-                      Text(
+                      const Text(
                         'My ',
                         style: TextStyle(
                           fontSize: 25,
@@ -76,32 +77,32 @@ class _DribbleState extends State<Dribble> {
                           color: Colors.black,
                         ),
                       ),
-                      Text(
+                      const Text(
                         'Cards',
                         style: TextStyle(
                           fontSize: 25,
                         ),
                       ),
-                      SizedBox(width: 80),
+                      const SizedBox(width: 80),
                       Container(
-                        padding: EdgeInsets.all(12),
+                        padding: const EdgeInsets.all(12),
                         decoration: BoxDecoration(
                           color: Colors.grey[400],
                           shape: BoxShape.circle,
                         ),
-                        child: Icon(Icons.add),
+                        child: const Icon(Icons.add),
                       ),
                     ]),
                   ]),
             ),
-            SizedBox(height: 10),
+            const SizedBox(height: 10),
             Container(
               height: 200,
               child: PageView(
                   scrollDirection: Axis.horizontal,
                   controller: _controller,
                   children: [
-                    MyCard(
+                    const MyCard(
                       balance: 5250.25,
                       cardNumber: 12345678,
                       expiryYear: 24,
@@ -124,7 +125,7 @@ class _DribbleState extends State<Dribble> {
                     ),
                   ]),
             ),
-            SizedBox(height: 10),
+            const SizedBox(height: 10),
             SmoothPageIndicator(
               controller: _controller,
               count: 3,
@@ -134,7 +135,7 @@ class _DribbleState extends State<Dribble> {
             ),
             const SizedBox(height: 5),
             Padding(
-              padding: EdgeInsets.symmetric(horizontal: 8.0),
+              padding: const EdgeInsets.symmetric(horizontal: 8.0),
               child: Row(
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: [
