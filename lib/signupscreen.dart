@@ -1,22 +1,17 @@
 import 'package:flutter/material.dart';
-import 'package:my_app/Screen.dart';
-import 'package:my_app/dashboard.dart';
-import 'package:my_app/product.dart';
-import 'package:my_app/signupscreen.dart';
-import 'package:my_app/test.dart';
 
-class LoginScreen extends StatefulWidget {
-  const LoginScreen({super.key});
+import 'package:my_app/loginscreen.dart';
+
+import 'package:my_app/review.dart';
+
+class SignupScreen extends StatefulWidget {
+  const SignupScreen({super.key});
 
   @override
-  State<LoginScreen> createState() => _LoginState();
+  State<SignupScreen> createState() => _SignupScreenState();
 }
 
-class _LoginState extends State<LoginScreen> {
-  get passwordController => null;
-
-  get emailController => null;
-
+class _SignupScreenState extends State<SignupScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -28,25 +23,26 @@ class _LoginState extends State<LoginScreen> {
               Column(crossAxisAlignment: CrossAxisAlignment.start, children: [
             const SizedBox(height: 130),
             const Text(
-              'Welcome, ',
+              'Create Account',
               style: TextStyle(
-                color: Colors.black,
-                fontSize: 30,
+                fontSize: 25,
                 fontWeight: FontWeight.bold,
+                color: Colors.black,
               ),
             ),
-            const SizedBox(height: 5),
-            const Text(
-              'Enter your credentials to Login',
-              style: TextStyle(
-                color: Colors.black,
-                fontSize: 15,
-                fontWeight: FontWeight.normal,
+            const SizedBox(height: 10),
+            const Center(
+              child: Text(
+                'Sign Up',
+                style: TextStyle(
+                  fontSize: 25,
+                  fontWeight: FontWeight.normal,
+                  color: Colors.black,
+                ),
               ),
             ),
             const SizedBox(height: 10),
             TextFormField(
-              controller: emailController,
               decoration: const InputDecoration(
                 labelText: 'Email Address',
                 prefixIcon: Icon(Icons.email),
@@ -55,7 +51,6 @@ class _LoginState extends State<LoginScreen> {
             ),
             const SizedBox(height: 10),
             TextFormField(
-              controller: passwordController,
               decoration: const InputDecoration(
                 labelText: 'Password',
                 prefixIcon: Icon(Icons.password),
@@ -63,18 +58,17 @@ class _LoginState extends State<LoginScreen> {
               ),
             ),
             const SizedBox(height: 10),
-            const Text(
-              'forgot password',
-              style: TextStyle(
-                color: Colors.blueAccent,
-                fontSize: 12,
-                fontWeight: FontWeight.normal,
+            TextFormField(
+              decoration: const InputDecoration(
+                labelText: ' Confirm Password',
+                prefixIcon: Icon(Icons.password),
+                border: OutlineInputBorder(),
               ),
             ),
-            const SizedBox(height: 10),
+            const SizedBox(height: 20),
             Container(
               width: 400,
-              height: 60,
+              height: 50,
               decoration: BoxDecoration(
                 color: Colors.blueAccent,
                 borderRadius: BorderRadius.circular(10),
@@ -82,10 +76,12 @@ class _LoginState extends State<LoginScreen> {
               child: TextButton(
                 style: TextButton.styleFrom(foregroundColor: Colors.white),
                 onPressed: () {
-                  Navigator.push(context,
-                      MaterialPageRoute(builder: ((context) => Test())));
+                  Navigator.push(
+                      context,
+                      MaterialPageRoute(
+                          builder: ((context) => const Review())));
                 },
-                child: const Text('Login'),
+                child: const Text('Sign up'),
               ),
             ),
             Row(
@@ -93,7 +89,7 @@ class _LoginState extends State<LoginScreen> {
                 Center(
                   child: Row(children: [
                     const Text(
-                      "Don't have an account?",
+                      'Already have an account?',
                       style: TextStyle(
                         color: Colors.black,
                       ),
@@ -105,11 +101,11 @@ class _LoginState extends State<LoginScreen> {
                         Navigator.push(
                             context,
                             MaterialPageRoute(
-                                builder: ((context) => const SignupScreen())));
+                                builder: ((context) => const LoginScreen())));
                       },
                       child: const Center(
                         child: Text(
-                          'Sign Up',
+                          'Log in',
                         ),
                       ),
                     ),

@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "670399834391",
+    "project_id": "codepie-4db1a",
+    "storage_bucket": "codepie-4db1a.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:670399834391:android:e3c68adf7579bbda322f52",
+        "android_client_info": {
+          "package_name": "com.example.my_app"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCyIpaYd6Mg9_7093rNCguUNZl3rWgKduA"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
