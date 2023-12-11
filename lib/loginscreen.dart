@@ -73,7 +73,7 @@ class _LoginState extends State<LoginScreen> {
             ),
             const SizedBox(height: 10),
             Container(
-              width: 400,
+              width: 350,
               height: 60,
               decoration: BoxDecoration(
                 color: Colors.blueAccent,
